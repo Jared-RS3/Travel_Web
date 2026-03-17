@@ -53,7 +53,7 @@ export function AboutSection() {
             The Azure was founded by the Reyes family in 2018 on a quiet stretch of
             El Nido coastline in Palawan. After years of growing up sailing these
             waters, they wanted to share that feeling with guests from around the
-            world — not just the views, but the pace, the food, and the people.
+            world. Not just the views, but the pace, the food, and the people.
           </p>
           <p className="about-body">
             Every suite was built to let the outside in. Locally sourced bamboo,
@@ -124,7 +124,7 @@ const EXPERIENCES = [
   {
     category: 'Dining',
     title: 'Cliff Terrace Dinner',
-    desc: 'A seven-course tasting menu of modernised Filipino dishes — kinilaw, inihaw na pusit, sinigang foam — served on the edge of the cliff above the sea.',
+    desc: 'A seven-course tasting menu of modernised Filipino dishes including kinilaw, inihaw na pusit, and sinigang foam, served on the edge of the cliff above the sea.',
     duration: 'Nightly from 6 pm · From ₱6,500 / guest',
     img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80',
     tag: 'Award-winning',
@@ -446,15 +446,15 @@ export function LocationSection() {
               <ul className="loc-how">
                 <li>
                   <span className="loc-icon">✈</span>
-                  <span>Fly to El Nido Airport (ENI) via AirSWIFT from Manila — 55 min. We arrange shuttle pickup (25 min).</span>
+                  <span>Fly to El Nido Airport (ENI) via AirSWIFT from Manila, a 55-minute flight. Our shuttle picks you up and has you at the resort in around 25 minutes.</span>
                 </li>
                 <li>
                   <span className="loc-icon">🛥</span>
-                  <span>Ferry from Puerto Princesa via FastCat — 4 hr. Private speedboat transfers available on request.</span>
+                  <span>Ferry from Puerto Princesa via FastCat, about 4 hours. Private speedboat transfers are also available on request.</span>
                 </li>
                 <li>
                   <span className="loc-icon">🚗</span>
-                  <span>Van transfer from Puerto Princesa (PPQ) — approx. 5 hr through mountain road. Scenic but slow.</span>
+                  <span>Van transfer from Puerto Princesa (PPQ), roughly 5 hours along the mountain road through the Palawan interior. A scenic drive, but allow the full day.</span>
                 </li>
               </ul>
             </div>

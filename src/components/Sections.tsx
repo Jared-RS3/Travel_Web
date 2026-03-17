@@ -396,7 +396,7 @@ export function Sections() {
                   <option>Overwater Villa</option>
                   <option>Garden Pool Villa</option>
                   <option>Cliff-Edge Penthouse</option>
-                  <option>Flexible — advise me</option>
+                  <option>No preference, advise me</option>
                 </select>
               </div>
             </div>
