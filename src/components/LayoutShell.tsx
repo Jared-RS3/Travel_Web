@@ -34,21 +34,21 @@ export function LayoutShell({ children }: PropsWithChildren) {
 
       <aside className="left-rail" aria-label="Brand rail">
         <div className="rail-inner">
-          <p className="rail-kicker">DayBreak Resort Collection</p>
-          <h1 className="rail-word">TRAVEL</h1>
+          <p className="rail-kicker">The Azure · Philippines</p>
+          <h1 className="rail-word">AZURE</h1>
         </div>
       </aside>
 
       <div className="content-pane">
         <header className="top-nav">
-          <a className="brand" href="#top" aria-label="DayBreak home">
-            DayBreak
+          <a className="brand" href="#top" aria-label="The Azure home">
+            The Azure
           </a>
           <nav className="nav-links" aria-label="Primary navigation">
             <NavLink href="#about">About</NavLink>
-            <NavLink href="#services">Services</NavLink>
-            <NavLink href="#destinations">Destinations</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
+            <NavLink href="#gallery">Gallery</NavLink>
+            <NavLink href="#experiences">Experiences</NavLink>
+            <NavLink href="#contact">Book</NavLink>
           </nav>
           <button
             type="button"

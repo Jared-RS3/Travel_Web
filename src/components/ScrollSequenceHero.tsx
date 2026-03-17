@@ -16,23 +16,23 @@ type ScrollSequenceHeroProps = {
 };
 
 const CHAPTERS: ChapterMeta[] = [
-  { label: 'Arrival',      range: [0.05, 0.22] },
-  { label: 'About',        range: [0.25, 0.45] },
-  { label: 'Services',     range: [0.48, 0.70] },
-  { label: 'Testimonials', range: [0.73, 0.95] },
+  { label: 'Arrival',    range: [0.05, 0.22] },
+  { label: 'About',      range: [0.25, 0.45] },
+  { label: 'Amenities',  range: [0.48, 0.70] },
+  { label: 'Guests',     range: [0.73, 0.95] },
 ];
 
 const SERVICES = [
-  { icon: '✦', title: 'Concierge',      text: 'Private itineraries and seamless local guidance around every stay.' },
-  { icon: '◈', title: 'Private Dining', text: 'Chef-led settings on cliffs, in villas, by moonlit waterlines.' },
-  { icon: '◉', title: 'Experiences',    text: 'Sea, wellness, and cultural moments tailored to your pace.' },
-  { icon: '⬡', title: 'Stays',          text: 'Architectural residences with ocean-facing suites.' },
+  { icon: '✦', title: 'Beachfront Suites', text: 'Wake to unobstructed sea views from your private terrace or pool villa on the Philippine shore.' },
+  { icon: '◈', title: 'Azure Spa',         text: 'Traditional Filipino hilot massage, herbal rituals, and holistic wellness by the water.' },
+  { icon: '◉', title: 'Island Dining',     text: 'Ocean-fresh Filipino cuisine served on the shore, cliff terrace, or open-air Horizon Restaurant.' },
+  { icon: '⬡', title: 'Sea Experiences',  text: 'Island hopping, coral diving, snorkelling, and private sunset cruises through the archipelago.' },
 ];
 
 const TESTIMONIALS = [
-  { quote: 'A masterclass in calm. Every moment felt precise yet effortless.', author: 'Elena V.', location: 'Milan' },
-  { quote: 'Rarely does a destination feel this cinematic in real life.',        author: 'Nadia R.', location: 'Dubai' },
-  { quote: 'The architecture, the silence, the care. We left restored.',        author: 'Marcus T.', location: 'London' },
+  { quote: 'The Azure is unlike anything I have experienced — the sea, the silence, the warmth of the Philippine islands.', author: 'Sofia M.', location: 'Madrid' },
+  { quote: 'Mornings on our private terrace with the ocean stretching to the horizon. Simply perfect.',                      author: 'James K.', location: 'Singapore' },
+  { quote: 'The spa, the food, the people — The Azure gave us the most beautiful week of our lives.',                        author: 'Priya T.', location: 'Mumbai' },
 ];
 
 const clamp = (v: number, lo: number, hi: number) => Math.min(Math.max(v, lo), hi);
@@ -322,11 +322,11 @@ export function ScrollSequenceHero({
             <div className="hc-arrival__body">
               <p className="hc-eyebrow">01 Arrival</p>
               <h2 className="hc-arrival__headline">
-                <em>Palm</em>
-                <span>canopy</span>
-                <span>calm.</span>
+                <em>Azure</em>
+                <span>waters</span>
+                <span>await.</span>
               </h2>
-              <p className="hc-arrival__sub">A slow descent into quiet luxury.</p>
+              <p className="hc-arrival__sub">A private retreat in the Philippine islands.</p>
             </div>
           </div>
 
@@ -334,7 +334,7 @@ export function ScrollSequenceHero({
           <div
             className="hc hc--about"
             ref={el => { chapterRefs.current[1] = el; }}
-            aria-label="About DayBreak"
+            aria-label="About The Azure"
           >
             <div className="hc-about__stamp">
               <span>EST.</span>
@@ -343,32 +343,32 @@ export function ScrollSequenceHero({
             <div className="hc-about__headline-wrap">
               <p className="hc-eyebrow">Who we are</p>
               <h2 className="hc-about__headline">
-                Where<br />silence<br />meets<br />design.
+                Where<br />island<br />life<br />slows.
               </h2>
             </div>
             <div className="hc-about__card">
               <p className="hc-about__body">
-                DayBreak curates architecture first destinations. Every detail
-                restrained, warm, and deeply intentional. Local craft meets
-                contemporary hospitality for journeys felt long after.
+                The Azure is a private beachfront resort nestled in the heart of the
+                Philippines. Designed with the rhythm of the sea in mind — every suite,
+                spa, and table frames the ocean in a different, breathtaking way.
               </p>
               <ul className="hc-about__tags" aria-label="Our focus areas">
-                <li>Bespoke planning</li>
-                <li>Oceanfront residences</li>
-                <li>Awarded guest service</li>
+                <li>Beachfront Suites</li>
+                <li>Private Island Access</li>
+                <li>Award-Winning Hospitality</li>
               </ul>
             </div>
-            <div className="hc-about__vertical-brand" aria-hidden="true">DayBreak</div>
+            <div className="hc-about__vertical-brand" aria-hidden="true">The Azure</div>
           </div>
 
           {/* ─── Chapter 3 · Services — interior glow ───────────────────────── */}
           <div
             className="hc hc--services"
             ref={el => { chapterRefs.current[2] = el; }}
-            aria-label="Our services"
+            aria-label="Our amenities"
           >
             <div className="hc-services__header">
-              <p className="hc-eyebrow">Our services</p>
+              <p className="hc-eyebrow">Our amenities</p>
               <div className="hc-services__rule" aria-hidden="true" />
             </div>
             <ul className="hc-services__grid">
