@@ -1,1 +1,1 @@
-{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/LayoutShell.tsx","./src/components/ScrollSequenceHero.tsx","./src/components/Sections.tsx"],"version":"5.9.3"}
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/ExtraSections.tsx","./src/components/LayoutShell.tsx","./src/components/LoadingScreen.tsx","./src/components/ScrollSequenceHero.tsx","./src/components/Sections.tsx"],"version":"5.9.3"}

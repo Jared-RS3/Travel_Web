@@ -48,6 +48,8 @@ export function LayoutShell({ children }: PropsWithChildren) {
             <NavLink href="#about">About</NavLink>
             <NavLink href="#gallery">Gallery</NavLink>
             <NavLink href="#experiences">Experiences</NavLink>
+            <NavLink href="#rates">Rates</NavLink>
+            <NavLink href="#location">Location</NavLink>
             <NavLink href="#contact">Book</NavLink>
           </nav>
           <button

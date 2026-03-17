@@ -24,15 +24,15 @@ const CHAPTERS: ChapterMeta[] = [
 
 const SERVICES = [
   { icon: '✦', title: 'Beachfront Suites', text: 'Wake to unobstructed sea views from your private terrace or pool villa on the Philippine shore.' },
-  { icon: '◈', title: 'Azure Spa',         text: 'Traditional Filipino hilot massage, herbal rituals, and holistic wellness by the water.' },
-  { icon: '◉', title: 'Island Dining',     text: 'Ocean-fresh Filipino cuisine served on the shore, cliff terrace, or open-air Horizon Restaurant.' },
+  { icon: '◈', title: 'Azure Spa',         text: 'Traditional Filipino hilot massage, herbal rituals, and wellness by the water.' },
+  { icon: '◉', title: 'Island Dining',     text: 'Fresh Filipino cuisine served on the shore, cliff terrace, or open air Horizon Restaurant.' },
   { icon: '⬡', title: 'Sea Experiences',  text: 'Island hopping, coral diving, snorkelling, and private sunset cruises through the archipelago.' },
 ];
 
 const TESTIMONIALS = [
-  { quote: 'The Azure is unlike anything I have experienced — the sea, the silence, the warmth of the Philippine islands.', author: 'Sofia M.', location: 'Madrid' },
+  { quote: 'The Azure felt unlike anywhere I have been. The sea, the calm, and the warmth of the Philippine islands stayed with me.', author: 'Sofia M.', location: 'Madrid' },
   { quote: 'Mornings on our private terrace with the ocean stretching to the horizon. Simply perfect.',                      author: 'James K.', location: 'Singapore' },
-  { quote: 'The spa, the food, the people — The Azure gave us the most beautiful week of our lives.',                        author: 'Priya T.', location: 'Mumbai' },
+  { quote: 'The spa, the food, and the people made this the most beautiful week of our lives.',                               author: 'Priya T.', location: 'Mumbai' },
 ];
 
 const clamp = (v: number, lo: number, hi: number) => Math.min(Math.max(v, lo), hi);
@@ -316,8 +316,15 @@ export function ScrollSequenceHero({
             ref={el => { chapterRefs.current[0] = el; }}
           >
             <div className="hc-arrival__scroll-hint">
-              <span className="hc-scroll-line" />
-              <span>Scroll</span>
+              <div className="scroll-arrow-anim" aria-label="Scroll down">
+                <svg className="scroll-arrow-svg" viewBox="0 0 40 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="18.5" y="0.5" width="3" height="32" rx="1.5" fill="rgba(245,236,225,0.30)"/>
+                  <circle className="scroll-dot" cx="20" cy="12" r="3.5" fill="rgba(216,194,161,0.95)"/>
+                  <polyline className="scroll-chevron scroll-chevron--1" points="8,38 20,52 32,38" stroke="rgba(245,236,225,0.70)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  <polyline className="scroll-chevron scroll-chevron--2" points="8,48 20,62 32,48" stroke="rgba(245,236,225,0.36)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                </svg>
+                <span className="scroll-label">Scroll</span>
+              </div>
             </div>
             <div className="hc-arrival__body">
               <p className="hc-eyebrow">01 Arrival</p>
@@ -349,13 +356,13 @@ export function ScrollSequenceHero({
             <div className="hc-about__card">
               <p className="hc-about__body">
                 The Azure is a private beachfront resort nestled in the heart of the
-                Philippines. Designed with the rhythm of the sea in mind — every suite,
+                Philippines. Designed with the rhythm of the sea in mind, every suite,
                 spa, and table frames the ocean in a different, breathtaking way.
               </p>
               <ul className="hc-about__tags" aria-label="Our focus areas">
                 <li>Beachfront Suites</li>
                 <li>Private Island Access</li>
-                <li>Award-Winning Hospitality</li>
+                <li>Award Winning Hospitality</li>
               </ul>
             </div>
             <div className="hc-about__vertical-brand" aria-hidden="true">The Azure</div>
