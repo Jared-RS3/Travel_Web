@@ -10,8 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 const ABOUT_STATS = [
   { value: '14', unit: 'suites', label: 'Private ocean suites' },
   { value: '8', unit: 'ha', label: 'Of beachfront grounds' },
-  { value: '4.9', unit: '★', label: 'Average guest rating' },
-  { value: '2018', unit: '', label: 'Year we opened' },
+  { value: '80%', unit: '', label: 'Produce sourced locally' },
+  { value: '60+', unit: '', label: 'Local jobs created' },
 ];
 
 export function AboutSection() {
@@ -43,6 +43,25 @@ export function AboutSection() {
 
   return (
     <section id="about" className="about-section full-bleed-section" ref={sectionRef}>
+      {/* Caustic-light shimmer strips — very subtle underwater dappled effect */}
+      <div className="about-caustics" aria-hidden="true">
+        {[...Array(6)].map((_, i) => (
+          <div key={i} className={`caustic caustic--${i}`} />
+        ))}
+      </div>
+
+      {/* Fish — floats in from the left, blends via screen mode into the dark ocean */}
+      <div className="about-fish-wrap" aria-hidden="true">
+        <video
+          className="about-fish-video"
+          src="/Whisk_qzm5iwmhjjm1mmnx0cn1etytumnjrtlibjnj1iz.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      </div>
+
       <div className="about-inner section-inner">
         <div className="about-text-col">
           <p className="section-kicker">Our Story</p>
@@ -50,10 +69,10 @@ export function AboutSection() {
             Built by the sea,<br /><em>shaped by the islands.</em>
           </h2>
           <p className="about-body">
-            The Azure was founded by the Reyes family in 2018 on a quiet stretch of
+            The Azure is being built by the Reyes family on a quiet stretch of
             El Nido coastline in Palawan. After years of growing up sailing these
-            waters, they wanted to share that feeling with guests from around the
-            world. Not just the views, but the pace, the food, and the people.
+            waters, they set out to share that feeling with guests from around the
+            world — not just the views, but the pace, the food, and the people.
           </p>
           <p className="about-body">
             Every suite was built to let the outside in. Locally sourced bamboo,
@@ -78,8 +97,8 @@ export function AboutSection() {
               style={{ backgroundImage: "url('https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=600&q=80')" }}
             />
             <div className="about-img-badge">
-              <span className="about-img-badge__year">EST.</span>
-              <span className="about-img-badge__value">2018</span>
+              <span className="about-img-badge__year">OPENING</span>
+              <span className="about-img-badge__value">2026</span>
             </div>
           </div>
         </div>

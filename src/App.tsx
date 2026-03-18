@@ -12,6 +12,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const [loaded, setLoaded] = useState(false);
+  const firstSequenceCount = 240;
+  const secondSequenceCount = 240;
+  const totalSequenceCount = firstSequenceCount + secondSequenceCount;
 
   useEffect(() => {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -49,15 +52,20 @@ function App() {
       <div style={{ visibility: loaded ? 'visible' : 'hidden' }}>
         <LayoutShell>
           <ScrollSequenceHero
-            frameCount={240}
-            framePathBuilder={(index) =>
-              `/ezgif-77f168bedd520226-jpg/ezgif-frame-${String(index + 1).padStart(3, '0')}.jpg`
-            }
+            frameCount={totalSequenceCount}
+            framePathBuilder={(index) => {
+              if (index < firstSequenceCount) {
+                return `/ezgif-77f168bedd520226-jpg/ezgif-frame-${String(index + 1).padStart(3, '0')}.jpg`;
+              }
+
+              const underwaterIndex = index - firstSequenceCount + 1;
+              return `/ezgif-1bcdbff9c46691a6-jpg/ezgif-frame-${String(underwaterIndex).padStart(3, '0')}.jpg`;
+            }}
           />
           <AboutSection />
           <ExperiencesSection />
-          <Sections />
           <RatesSection />
+          <Sections />
           <FaqSection />
           <LocationSection />
         </LayoutShell>

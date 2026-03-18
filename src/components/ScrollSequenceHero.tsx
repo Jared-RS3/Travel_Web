@@ -29,10 +29,10 @@ const SERVICES = [
   { icon: '⬡', title: 'Sea Experiences',  text: 'Island hopping, coral diving, snorkelling, and private sunset cruises through the archipelago.' },
 ];
 
-const TESTIMONIALS = [
-  { quote: 'The Azure felt unlike anywhere I have been. The sea, the calm, and the warmth of the Philippine islands stayed with me.', author: 'Sofia M.', location: 'Madrid' },
-  { quote: 'Mornings on our private terrace with the ocean stretching to the horizon. Simply perfect.',                      author: 'James K.', location: 'Singapore' },
-  { quote: 'The spa, the food, and the people made this the most beautiful week of our lives.',                               author: 'Priya T.', location: 'Mumbai' },
+const COMMITMENTS = [
+  { stat: '80%',  detail: 'of produce sourced from farms within 12 km of the resort', label: 'Local sourcing' },
+  { stat: '60+',  detail: 'full-time positions created for residents of Barangay Poblacion, El Nido', label: 'Local employment' },
+  { stat: '100%', detail: 'of construction timber certified under the DENR Community Forestry Programme', label: 'Certified timber' },
 ];
 
 const clamp = (v: number, lo: number, hi: number) => Math.min(Math.max(v, lo), hi);
@@ -344,8 +344,8 @@ export function ScrollSequenceHero({
             aria-label="About The Azure"
           >
             <div className="hc-about__stamp">
-              <span>EST.</span>
-              <span>2018</span>
+              <span>OPENING</span>
+              <span>2026</span>
             </div>
             <div className="hc-about__headline-wrap">
               <p className="hc-eyebrow">Who we are</p>
@@ -389,19 +389,21 @@ export function ScrollSequenceHero({
             </ul>
           </div>
 
-          {/* ─── Chapter 4 · Testimonials — ocean / pier ────────────────────── */}
+          {/* ─── Chapter 4 · Commitments — ocean / pier ─────────────────────── */}
           <div
             className="hc hc--testimonials"
             ref={el => { chapterRefs.current[3] = el; }}
-            aria-label="Guest testimonials"
+            aria-label="Our commitments"
           >
-            <div className="hc-testi__bg-quote" aria-hidden="true">❝</div>
-            {TESTIMONIALS.map((t, i) => (
-              <figure key={t.author} className={`hc-testi hc-testi--${i}`}>
-                <blockquote className="hc-testi__quote">{t.quote}</blockquote>
+            <div className="hc-testi__bg-quote" aria-hidden="true">✦</div>
+            {COMMITMENTS.map((c, i) => (
+              <figure key={c.label} className={`hc-testi hc-testi--${i}`}>
+                <blockquote className="hc-testi__quote">
+                  <span className="hc-commit__stat">{c.stat}</span>
+                  <span className="hc-commit__detail">{c.detail}</span>
+                </blockquote>
                 <figcaption className="hc-testi__author">
-                  {t.author},&nbsp;
-                  <span className="hc-testi__loc">{t.location}</span>
+                  <span className="hc-testi__loc">{c.label}</span>
                 </figcaption>
               </figure>
             ))}
