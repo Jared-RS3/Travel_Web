@@ -450,11 +450,11 @@ export function LocationSection() {
               <h4>Address</h4>
               <p>The Azure Resort<br />Sitio Buena Vista, Barangay Poblacion<br />El Nido, Palawan 5313<br />Philippines</p>
             </div>
-            <div className="loc-detail-block">
+            {/* <div className="loc-detail-block">
               <h4>Phone &amp; WhatsApp</h4>
               <p><a href="tel:+639178820042">+63 917 882 0042</a></p>
               <p className="loc-note">Available daily 7 am – 10 pm PHT</p>
-            </div>
+            </div> */}
             <div className="loc-detail-block">
               <h4>Email</h4>
               <p><a href="mailto:reservations@theazureelnido.com">reservations@theazureelnido.com</a></p>
